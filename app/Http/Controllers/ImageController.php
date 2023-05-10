@@ -3,11 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Interfaces\ImageStorage;
-
 use Illuminate\Http\RedirectResponse;
-
 use Illuminate\Http\Request;
-
 use Illuminate\View\View;
 
 class ImageController extends Controller
@@ -21,6 +18,7 @@ class ImageController extends Controller
     {
         $storeInterface = app(ImageStorage::class);
         $storeInterface->store($request);
+
         return back();
     }
 }
