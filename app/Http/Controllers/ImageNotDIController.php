@@ -3,11 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Util\ImageLocalStorage;
-
 use Illuminate\Http\RedirectResponse;
-
 use Illuminate\Http\Request;
-
 use Illuminate\View\View;
 
 class ImageNotDIController extends Controller
@@ -21,6 +18,7 @@ class ImageNotDIController extends Controller
     {
         $storeImageLocal = new ImageLocalStorage();
         $storeImageLocal->store($request);
+
         return back();
     }
 }
